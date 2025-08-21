@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Μαθήματα ανά Εξάμηνο Σπουδών</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #666;
+      --accent: #0b5fff;
+      --border: #e5e7eb;
+      --card: #fafafa;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Noto Sans Greek', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Segoe UI Emoji";
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(6px);
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 16px 20px; }
+    .topbar {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .title { font-size: 22px; font-weight: 700; letter-spacing: 0.2px; }
+    .spacer { flex: 1 1 auto; }
+    .name {
+      font-weight: 600; color: var(--muted);
+      border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px;
+    }
+    main { padding: 18px 20px 44px; }
+    .container { max-width: 980px; margin: 0 auto; }
+    h2.section {
+      margin: 28px 0 8px; font-size: 18px; font-weight: 700; border-left: 4px solid var(--accent); padding-left: 10px;
+    }
+    h3.sub { margin: 0 0 8px; font-size: 15px; font-weight: 700; color: var(--muted); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    table {
+      width: 100%; border-collapse: collapse; margin: 8px 0 4px; font-size: 14px;
+    }
+    thead th {
+      text-align: left; font-weight: 700; color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 10px;
+    }
+    tbody td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    .code { white-space: nowrap; font-feature-settings: "tnum" on, "lnum" on; }
+    .type { white-space: nowrap; }
+    .links { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 6px 12px; margin-top: 8px; }
+    .links a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed transparent; }
+    .links a:hover { border-bottom-color: var(--accent); }
+    @media print {
+      header { position: static; backdrop-filter: none; }
+      .name { border: none; }
+      body { color: #000; }
+      .card { background: #fff; border-color: #ccc; }
+      a { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <div class="title">Μαθήματα ανά Εξάμηνο Σπουδών</div>
+      <div class="spacer"></div>
+      <!-- Top-right name per request -->
+      <div class="name">Zoi Chita</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- 1ο Εξάμηνο -->
+      <h2 class="section">Μαθήματα 1ου εξαμήνου</h2>
+      <h3 class="sub">1ο εξάμηνο</h3>
+      <div class="card">
+        <table aria-label="Μαθήματα 1ου εξαμήνου">
+          <thead>
+            <tr>
+              <th class="code">Κωδικός</th>
+              <th>Τίτλος</th>
+              <th>Βαθμός</th>
+              <th class="type">Τύπος</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">0102Α</td><td>ΕΙΣΑΓΩΓΗ ΣΤΗΝ ΑΛΓΕΒΡΑ ΚΑΙ ΣΤΗ ΘΕΩΡΙΑ ΑΡΙΘΜΩΝ</td><td>6</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0110</td><td>ΣΤΟΙΧΕΙΑ ΑΠΟ ΤΗ ΓΡΑΜΜΙΚΗ ΑΛΓΕΒΡΑ</td><td>6.2</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0201</td><td>ΛΟΓΙΣΜΟΣ Ι</td><td>9</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0430Α</td><td>ΕΙΣΑΓΩΓΗ ΣΤΟΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟ Η/Υ (F ή C)</td><td>10</td><td class="type">Υ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 2ο Εξάμηνο -->
+      <h2 class="section">Μαθήματα 2ου εξαμήνου</h2>
+      <h3 class="sub">2ο εξάμηνο</h3>
+      <div class="card">
+        <table aria-label="Μαθήματα 2ου εξαμήνου">
+          <thead>
+            <tr>
+              <th class="code">Κωδικός</th>
+              <th>Τίτλος</th>
+              <th>Βαθμός</th>
+              <th class="type">Τύπος</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">0108Α</td><td>ΓΡΑΜΜΙΚΗ ΑΛΓΕΒΡΑ</td><td>6.5</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0202Α</td><td>ΛΟΓΙΣΜΟΣ ΙΙ</td><td>6.5</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0305</td><td>ΣΤΟΙΧΕΙΑ ΑΝΑΛΥΤΙΚΗΣ ΓΕΩΜΕΤΡΙΑΣ</td><td>8.2</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0401</td><td>ΘΕΩΡΗΤΙΚΗ ΠΛΗΡΟΦΟΡΙΚΗ I</td><td>5.5</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0430Α</td><td>ΕΙΣΑΓΩΓΗ ΣΤΟΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟ Η/Υ (F ή C) (επαναλαμβανόμενο)</td><td>–</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0501</td><td>ΜΑΘΗΜΑΤΙΚΟΣ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ</td><td>9.4</td><td class="type">Υ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3ο Εξάμηνο -->
+      <h2 class="section">Μαθήματα 3ου εξαμήνου</h2>
+      <h3 class="sub">3ο εξάμηνο</h3>
+      <div class="card">
+        <table aria-label="Μαθήματα 3ου εξαμήνου">
+          <thead>
+            <tr>
+              <th class="code">Κωδικός</th>
+              <th>Τίτλος</th>
+              <th>Βαθμός</th>
+              <th class="type">Τύπος</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">0106Α</td><td>ΑΛΓΕΒΡΙΚΕΣ ΔΟΜΕΣ Ι</td><td>7.2</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0203Α</td><td>ΛΟΓΙΣΜΟΣ ΙΙΙ</td><td>8</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0204Α</td><td>ΤΟΠΟΛΟΓΙΑ ΜΕΤΡΙΚΩΝ ΧΩΡΩΝ</td><td>3.6</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0306</td><td>ΕΙΣΑΓΩΓΗ ΣΤΗ ΓΕΩΜΕΤΡΙΑ Ι</td><td>6</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0502Α</td><td>ΘΕΩΡΙΑ ΠΙΘΑΝΟΤΗΤΩΝ Ι</td><td>7</td><td class="type">Υ</td></tr>
+          </tbody>
+        </table>
+        <div class="links">
+          <a href="https://qa.auth.gr/el/x/class/1/600254831">600254831</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254874">600254874</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254853">600254853</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254833">600254833</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254904">600254904</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254941">600254941</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254960">600254960</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254921">600254921</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254918">600254918</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254947">600254947</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254809">600254809</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254855">600254855</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254882">600254882</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254828">600254828</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254842">600254842</a>
+        </div>
+      </div>
+
+      <!-- 4ο Εξάμηνο -->
+      <h2 class="section">Μαθήματα 4ου εξαμήνου</h2>
+      <h3 class="sub">4ο εξάμηνο</h3>
+      <div class="card">
+        <table aria-label="Μαθήματα 4ου εξαμήνου">
+          <thead>
+            <tr>
+              <th class="code">Κωδικός</th>
+              <th>Τίτλος</th>
+              <th>Βαθμός</th>
+              <th class="type">Τύπος</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">0106Α</td><td>ΑΛΓΕΒΡΙΚΕΣ ΔΟΜΕΣ Ι (επαναλαμβανόμενο)</td><td>–</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0204Α</td><td>ΤΟΠΟΛΟΓΙΑ ΜΕΤΡΙΚΩΝ ΧΩΡΩΝ (επαναλαμβανόμενο)</td><td>5.8</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0205Α</td><td>ΛΟΓΙΣΜΟΣ IV</td><td>8</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0206Α</td><td>ΔΙΑΦΟΡΙΚΕΣ ΕΞΙΣΩΣΕΙΣ</td><td>8.5</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0505Α</td><td>ΘΕΩΡΙΑ ΠΙΘΑΝΟΤΗΤΩΝ ΙΙ</td><td>6</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0508</td><td>ΣΤΟΧΑΣΤΙΚΕΣ ΔΙΑΔΙΚΑΣΙΕΣ</td><td>9</td><td class="type">Υ</td></tr>
+            <tr><td class="code">ER005</td><td>ERASMUS 5</td><td>–</td><td class="type">ΠΑ</td></tr>
+            <tr><td class="code">ER006</td><td>ERASMUS 6</td><td>–</td><td class="type">ΠΑ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 5ο Εξάμηνο -->
+      <h2 class="section">Μαθήματα 5ου εξαμήνου</h2>
+      <h3 class="sub">5ο εξάμηνο</h3>
+      <div class="card">
+        <table aria-label="Μαθήματα 5ου εξαμήνου">
+          <thead>
+            <tr>
+              <th class="code">Κωδικός</th>
+              <th>Τίτλος</th>
+              <th>Βαθμός</th>
+              <th class="type">Τύπος</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">0207</td><td>ΕΙΣΑΓΩΓΗ ΣΤΗΝ ΠΡΑΓΜΑΤΙΚΗ ΑΝΑΛΥΣΗ</td><td>5.5</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0303Α</td><td>ΚΛΑΣΙΚΗ ΔΙΑΦΟΡΙΚΗ ΓΕΩΜΕΤΡΙΑ Ι</td><td>6.5</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0402</td><td>ΑΡΙΘΜΗΤΙΚΗ ΑΝΑΛΥΣΗ</td><td>7.5</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0503</td><td>ΣΤΑΤΙΣΤΙΚΗ</td><td>7</td><td class="type">Υ</td></tr>
+            <tr><td class="code">0506</td><td>ΣΤΟΧΑΣΤΙΚΕΣ ΣΤΡΑΤΗΓΙΚΕΣ</td><td>7.1</td><td class="type">Υ</td></tr>
+            <tr><td class="code">ER001</td><td>ERASMUS 1</td><td>–</td><td class="type">ΠΑ</td></tr>
+            <tr><td class="code">ER003</td><td>ERASMUS 3</td><td>–</td><td class="type">ΠΑ</td></tr>
+            <tr><td class="code">ΜΑΤ003</td><td>ΜΑΘΗΜΑ ΑΛΛΟΥ ΤΜΗΜΑΤΟΣ 1</td><td>–</td><td class="type">ΕΕ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 6ο Εξάμηνο -->
+      <h2 class="section">Μαθήματα 6ου εξαμήνου</h2>
+      <h3 class="sub">6ο εξάμηνο</h3>
+      <div class="card">
+        <div class="links">
+          <a href="https://qa.auth.gr/el/x/class/1/600254893">600254893</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254969">600254969</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254939">600254939</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254907">600254907</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254928">600254928</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254963">600254963</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254890">600254890</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254891">600254891</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254832">600254832</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254847">600254847</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254815">600254815</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254870">600254870</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254879">600254879</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254805">600254805</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254804">600254804</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254856">600254856</a>
+        </div>
+        <table aria-label="Μαθήματα 6ου εξαμήνου">
+          <thead>
+            <tr>
+              <th class="code">Κωδικός</th>
+              <th>Τίτλος</th>
+              <th>Βαθμός</th>
+              <th class="type">Τύπος</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">0208Α</td><td>ΜΙΓΑΔΙΚΗ ΑΝΑΛΥΣΗ</td><td>6</td><td class="type">Υ</td></tr>
+            <tr><td class="code">ER002</td><td>ERASMUS 2</td><td>–</td><td class="type">ΠΑ</td></tr>
+            <tr><td class="code">ER003</td><td>ERASMUS 3 (επαναλαμβανόμενο)</td><td>–</td><td class="type">ΠΑ</td></tr>
+            <tr><td class="code">ΜΑΤ003</td><td>ΜΑΘΗΜΑ ΑΛΛΟΥ ΤΜΗΜΑΤΟΣ 1 (επαναλαμβανόμενο)</td><td>–</td><td class="type">ΕΕ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 8ο Εξάμηνο -->
+      <h2 class="section">Μαθήματα 8ου εξαμήνου</h2>
+      <h3 class="sub">8ο εξάμηνο</h3>
+      <div class="card">
+        <table aria-label="Μαθήματα 8ου εξαμήνου">
+          <thead>
+            <tr>
+              <th class="code">Κωδικός</th>
+              <th>Τίτλος</th>
+              <th>Βαθμός</th>
+              <th class="type">Τύπος</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">ΜΑΤ002</td><td>ΜΑΘΗΜΑ ΑΛΛΟΥ ΤΜΗΜΑΤΟΣ 2</td><td>–</td><td class="type">ΕΕ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Χειμερινό Εξάμηνο -->
+      <h2 class="section">Μαθήματα Χειμερινού εξαμήνου</h2>
+      <h3 class="sub">Χειμερινό εξάμηνο</h3>
+      <div class="card">
+        <table aria-label="Χειμερινό εξάμηνο">
+          <thead>
+            <tr>
+              <th class="code">Κωδικός</th>
+              <th>Τίτλος</th>
+              <th>Βαθμός</th>
+              <th class="type">Τύπος</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">0131</td><td>ΘΕΩΡΙΑ ΟΜΑΔΩΝ</td><td>3.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0133</td><td>ΜΑΘΗΜΑΤΙΚΗ ΛΟΓΙΚΗ Ι</td><td>5.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0137</td><td>ΠΡΟΧΩΡΗΜΕΝΑ ΘΕΜΑΤΑ ΑΛΓΕΒΡΑΣ</td><td>6.3</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0147</td><td>ΣΕΜΙΝΑΡΙΟ ΠΡΟΒΛΗΜΑΤΩΝ Ι</td><td>2</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0233</td><td>ΓΕΝΙΚΗ ΤΟΠΟΛΟΓΙΑ</td><td>5.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0235</td><td>ΔΙΑΦΟΡΙΚΕΣ ΕΞΙΣΩΣΕΙΣ ΜΕ ΜΕΡΙΚΕΣ ΠΑΡΑΓΩΓΟΥΣ</td><td>5.2</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0236</td><td>ΔΥΝΑΜΙΚΑ ΣΥΣΤΗΜΑΤΑ</td><td>3.9</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0237</td><td>ΓΕΩΜΕΤΡΙΚΗ ΚΑΙ ΑΝΑΛΥΤΙΚΗ ΘΕΩΡΙΑ ΑΡΙΘΜΩΝ ΚΑΙ ΕΦΑΡΜΟΓΕΣ</td><td>5.4</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0261</td><td>ΜΙΓΑΔΙΚΗ ΑΝΑΛΥΣΗ ΚΑΙ ΘΕΩΡΙΑ ΔΥΝΑΜΙΚΟΥ</td><td>–</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0267</td><td>ΘΕΩΡΙΑ ΤΕΛΕΣΤΩΝ</td><td>1</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0304Α</td><td>ΔΙΑΦΟΡΙΣΙΜΕΣ ΠΟΛΛΑΠΛΟΤΗΤΕΣ</td><td>5.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0308</td><td>ΓΕΩΜΕΤΡΙΑ ΙΙΙ ΚΑΙ ΟΜΑΔΕΣ</td><td>3.2</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0433</td><td>ΚΛΑΣΙΚΗ ΘΕΩΡΙΑ ΕΛΕΓΧΟΥ</td><td>2.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0434</td><td>ΚΡΥΠΤΟΓΡΑΦΙΑ</td><td>3.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0465</td><td>ΚΩΔΙΚΕΣ ΔΙΟΡΘΩΤΕΣ ΛΑΘΩΝ</td><td>1.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0531</td><td>ΣΤΑΤΙΣΤΙΚΗ ΜΑΘΗΣΗ</td><td>–</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0535</td><td>ΣΤΟΧΑΣΤΙΚΕΣ ΕΠΙΧΕΙΡΗΣΙΑΚΕΣ ΕΡΕΥΝΕΣ</td><td>7.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0562</td><td>ΣΤΟΧΑΣΤΙΚΕΣ ΜΕΘΟΔΟΙ ΣΤΑ ΧΡΗΜΑΤΟΟΙΚΟΝΟΜΙΚΑ</td><td>–</td><td class="type">Ε</td></tr>
+            <tr><td class="code">601</td><td>ΑΝΑΛΥΣΗ ΜΑΘΗΜΑΤΙΚΩΝ ΚΕΙΜΕΝΩΝ ΣΕ ΑΓΓΛΙΚΗ ΓΛΩΣΣΑ</td><td>9</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0963</td><td>ΔΙΔΑΚΤΙΚΗ ΤΩΝ ΜΑΘΗΜΑΤΙΚΩΝ Ι</td><td>–</td><td class="type">Ε</td></tr>
+            <tr><td class="code">1061</td><td>ΕΙΣΑΓΩΓΗ ΣΤΗ ΜΕΤΕΩΡΟΛΟΓΙΑ ΚΑΙ ΚΛΙΜΑΤΟΛΟΓΙΑ</td><td>–</td><td class="type">ΕΕ</td></tr>
+            <tr><td class="code">1063</td><td>ΣΕΙΣΜΟΛΟΓΙΑ</td><td>–</td><td class="type">ΕΕ</td></tr>
+            <tr><td class="code">1064</td><td>ΘΕΩΡΗΤΙΚΗ ΜΗΧΑΝΙΚΗ</td><td>–</td><td class="type">ΕΕ</td></tr>
+            <tr><td class="code">Ν0107Α</td><td>ΑΛΓΕΒΡΙΚΕΣ ΔΟΜΕΣ ΙΙ</td><td>6.7</td><td class="type">Υ</td></tr>
+            <tr><td class="code">ΣΕΜ002</td><td>ΣΥΓΓΡΑΦΗ ΜΑΘΗΜΑΤΙΚΩΝ ΚΕΙΜΕΝΩΝ ΜΕ ΤΟ ΣΥΣΤΗΜΑ ΣΤΟΙΧΕΙΟΘΕΣΙΑΣ LATEX</td><td>2</td><td class="type">ΕΕ</td></tr>
+          </tbody>
+        </table>
+        <div class="links">
+          <a href="https://qa.auth.gr/el/x/class/1/600254949">600254949</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254887">600254887</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254888">600254888</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254943">600254943</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254944">600254944</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254841">600254841</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254859">600254859</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254866">600254866</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254869">600254869</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254817">600254817</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254821">600254821</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600266047">600266047</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600255597">600255597</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254862">600254862</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600266025">600266025</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254823">600254823</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254818">600254818</a>
+        </div>
+      </div>
+
+      <!-- Εαρινό Εξάμηνο -->
+      <h2 class="section">Μαθήματα Εαρινού εξαμήνου</h2>
+      <h3 class="sub">Εαρινό εξάμηνο</h3>
+      <div class="card">
+        <table aria-label="Εαρινό εξάμηνο">
+          <thead>
+            <tr>
+              <th class="code">Κωδικός</th>
+              <th>Τίτλος</th>
+              <th>Βαθμός</th>
+              <th class="type">Τύπος</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="code">0132</td><td>ΘΕΩΡΙΑ ΣΥΝΟΛΩΝ Ι</td><td>–</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0134</td><td>ΘΕΩΡΙΑ GALOIS</td><td>5.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0135</td><td>ΑΛΓΕΒΡΙΚΕΣ ΚΑΜΠΥΛΕΣ</td><td>3.7</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0136</td><td>ΘΕΩΡΙΑ ΑΡΙΘΜΩΝ</td><td>6.1</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0148</td><td>ΣΕΜΙΝΑΡΙΟ ΠΡΟΒΛΗΜΑΤΩΝ ΙΙ</td><td>2</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0165</td><td>ΑΛΓΕΒΡΙΚΗ ΘΕΩΡΙΑ ΑΡΙΘΜΩΝ</td><td>2.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0231</td><td>ΘΕΩΡΙΑ ΜΕΤΡΟΥ</td><td>4.1</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0232</td><td>ΣΤΟΙΧΕΙΑ ΣΥΝΑΡΤΗΣΙΑΚΗΣ ΑΝΑΛΥΣΗΣ</td><td>6.8</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0234</td><td>ΑΝΑΛΥΣΗ FOURIER</td><td>–</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0307</td><td>ΕΙΣΑΓΩΓΗ ΣΤΗ ΓΕΩΜΕΤΡΙΑ ΙΙ</td><td>4.8</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0332</td><td>ΚΛΑΣΙΚΗ ΔΙΑΦΟΡΙΚΗ ΓΕΩΜΕΤΡΙΑ ΙΙ</td><td>5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0333Α</td><td>ΕΙΣΑΓΩΓΗ ΣΤΗ ΓΕΩΜΕΤΡΙΑ RIEMANN</td><td>1.8</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0361</td><td>ΔΙΑΦΟΡΙΚΕΣ ΜΟΡΦΕΣ</td><td>–</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0431</td><td>ΥΠΟΛΟΓΙΣΤΙΚΑ ΜΑΘΗΜΑΤΙΚΑ</td><td>–</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0432</td><td>ΘΕΩΡΗΤΙΚΗ ΠΛΗΡΟΦΟΡΙΚΗ ΙΙ</td><td>8.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0461</td><td>ΣΥΜΒΟΛΙΚΕΣ ΓΛΩΣΣΕΣ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ</td><td>–</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0462</td><td>ΜΟΝΤΕΡΝΑ ΘΕΩΡΙΑ ΕΛΕΓΧΟΥ</td><td>–</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0530</td><td>ΕΦΑΡΜΟΣΜΕΝΗ ΑΝΑΛΥΣΗ ΠΑΛΙΝΔΡΟΜΗΣΗΣ ΚΑΙ ΔΙΑΣΠΟΡΑΣ</td><td>2</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0532</td><td>ΘΕΩΡΙΑ ΠΙΝΑΚΩΝ</td><td>–</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0533</td><td>ΠΡΟΣΔΙΟΡΙΣΤΙΚΕΣ ΜΕΘΟΔΟΙ ΒΕΛΤΙΣΤΟΠΟΙΗΣΗΣ</td><td>–</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0564</td><td>ΧΡΟΝΙΚΕΣ ΣΕΙΡΕΣ</td><td>–</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0566</td><td>ΔΕΙΓΜΑΤΟΛΗΨΙΑ</td><td>4</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0569Α</td><td>ΑΛΓΟΡΙΘΜΟΙ ΚΑΙ ΠΟΛΥΠΛΟΚΟΤΗΤΕΣ</td><td>5.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0572</td><td>ΣΥΝΔΥΑΣΤΙΚΗ ΚΑΙ ΘΕΩΡΙΑ ΓΡΑΦΗΜΑΤΩΝ</td><td>–</td><td class="type">Ε</td></tr>
+            <tr><td class="code">601</td><td>ΑΝΑΛΥΣΗ ΜΑΘΗΜΑΤΙΚΩΝ ΚΕΙΜΕΝΩΝ ΣΕ ΑΓΓΛΙΚΗ ΓΛΩΣΣΑ</td><td>–</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0962</td><td>ΙΣΤΟΡΙΑ ΤΩΝ ΜΑΘΗΜΑΤΙΚΩΝ</td><td>–</td><td class="type">Ε</td></tr>
+            <tr><td class="code">1062</td><td>ΓΕΝΙΚΗ ΚΑΙ ΔΥΝΑΜΙΚΗ ΜΕΤΕΩΡΟΛΟΓΙΑ</td><td>–</td><td class="type">ΕΕ</td></tr>
+            <tr><td class="code">1066</td><td>ΜΗΧΑΝΙΚΗ ΣΥΝΕΧΩΝ ΜΕΣΩΝ</td><td>–</td><td class="type">ΕΕ</td></tr>
+            <tr><td class="code">Ν0107Α</td><td>ΑΛΓΕΒΡΙΚΕΣ ΔΟΜΕΣ ΙΙ</td><td>6</td><td class="type">Υ</td></tr>
+            <tr><td class="code">ΣΕΜ002</td><td>ΣΥΓΓΡΑΦΗ ΜΑΘΗΜΑΤΙΚΩΝ ΚΕΙΜΕΝΩΝ ΜΕ ΤΟ ΣΥΣΤΗΜΑ ΣΤΟΙΧΕΙΟΘΕΣΙΑΣ LATEX</td><td>2</td><td class="type">ΕΕ</td></tr>
+          </tbody>
+        </table>
+        <div class="links">
+          <a href="https://qa.auth.gr/el/x/class/1/600254849">600254849</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600261800">600261800</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254851">600254851</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254871">600254871</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254877">600254877</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254878">600254878</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254814">600254814</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600267629">600267629</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254830">600254830</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254868">600254868</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254835">600254835</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254810">600254810</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600255588">600255588</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254931">600254931</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254923">600254923</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254895">600254895</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254924">600254924</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254957">600254957</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254896">600254896</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254925">600254925</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254962">600254962</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254898">600254898</a>
+        </div>
+        <div class="links">
+          <a href="https://qa.auth.gr/el/x/class/1/600254914">600254914</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254935">600254935</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600256110">600256110</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254886">600254886</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254970">600254970</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254922">600254922</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254967">600254967</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254951">600254951</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600270040">600270040</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254929">600254929</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254953">600254953</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254971">600254971</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254905">600254905</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254959">600254959</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254968">600254968</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254899">600254899</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254933">600254933</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254901">600254901</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254948">600254948</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254894">600254894</a>
+          <a href="https://qa.auth.gr/el/x/class/1/600254966">600254966</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

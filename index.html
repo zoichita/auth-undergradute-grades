@@ -142,6 +142,35 @@ footer {
   color: green;
   background: white; /* 👈 so it doesn’t overlap the line */
 }
+footer {
+  border-top: 1px solid #ccc;
+  background: #f9f9f9;
+  font-size: 14px;
+  color: #555;
+  padding: 12px 20px;
+  margin-top: 40px;
+}
+
+.footer-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-wrap a {
+  color: #1a0dab;  /* blue links like in your screenshot */
+  text-decoration: none;
+}
+
+.footer-wrap a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
@@ -426,5 +455,15 @@ footer {
   <footer>
   <div class="footer-circle">7.12</div>
 </footer>
+  <footer>
+    <div class="footer-wrap">
+      <span><a href="#">Κέντρο Ηλεκτρονικής Διακυβέρνησης</a> - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης</span>
+      <span>|</span>
+      <span><a href="mailto:support@auth.gr">support@auth.gr</a> - 2310999000</span>
+    </div>
+  </footer>
+</body>
+</html>
+
 </body>
 </html>

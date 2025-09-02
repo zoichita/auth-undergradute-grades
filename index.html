@@ -70,6 +70,41 @@
     .links { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 6px 12px; margin-top: 8px; }
     .links a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed transparent; }
     .links a:hover { border-bottom-color: var(--accent); }
+    .auth-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #161f27; /* dark background */
+  padding: 8px 16px;
+}
+
+.auth-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f5f5dc; /* light beige text */
+  font-size: 15px;
+}
+
+.auth-left img {
+  height: 28px;
+}
+
+.auth-left .brand {
+  font-weight: 700;
+}
+
+.auth-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.auth-right img {
+  height: 20px;
+  cursor: pointer;
+}
+
     @media print {
       header { position: static; backdrop-filter: none; }
       .name { border: none; }
@@ -87,6 +122,16 @@
   </style>
 </head>
 <body>
+  <div class="auth-topbar">
+  <div class="auth-left">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Aristotle_University_of_Thessaloniki_logo.png/40px-Aristotle_University_of_Thessaloniki_logo.png" alt="AUTH Logo">
+    <span class="brand">it.auth</span> | Κέντρο Ηλεκτρονικής Διακυβέρνησης ΑΠΘ
+  </div>
+  <div class="auth-right">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Stats">
+  </div>
+</div>
   <header>
     <div class="wrap topbar">
       <div class="title">Μαθήματα ανά Εξάμηνο Σπουδών</div>
@@ -279,14 +324,14 @@
             <tr><td class="code">0133</td><td>ΜΑΘΗΜΑΤΙΚΗ ΛΟΓΙΚΗ Ι</td><td>5.5</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0137</td><td>ΠΡΟΧΩΡΗΜΕΝΑ ΘΕΜΑΤΑ ΑΛΓΕΒΡΑΣ</td><td>6.3</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0147</td><td>ΣΕΜΙΝΑΡΙΟ ΠΡΟΒΛΗΜΑΤΩΝ Ι</td><td>2</td><td class="type">Ε</td></tr>
-            <tr class="green"><td class="code">0233</td><td>ΓΕΝΙΚΗ ΤΟΠΟΛΟΓΙΑ</td><td>5.8</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0233</td><td>ΓΕΝΙΚΗ ΤΟΠΟΛΟΓΙΑ</td><td>5.8</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0235</td><td>ΔΙΑΦΟΡΙΚΕΣ ΕΞΙΣΩΣΕΙΣ ΜΕ ΜΕΡΙΚΕΣ ΠΑΡΑΓΩΓΟΥΣ</td><td>5.2</td><td class="type">ΥΕ</td></tr>
-            <tr class="red"><td class="code">0236</td><td>ΔΥΝΑΜΙΚΑ ΣΥΣΤΗΜΑΤΑ</td><td>3.9</td><td class="type">ΥΕ</td></tr>
-            <tr class="green"><td class="code">0237</td><td>ΓΕΩΜΕΤΡΙΚΗ ΚΑΙ ΑΝΑΛΥΤΙΚΗ ΘΕΩΡΙΑ ΑΡΙΘΜΩΝ ΚΑΙ ΕΦΑΡΜΟΓΕΣ</td><td>5.4</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0236</td><td>ΔΥΝΑΜΙΚΑ ΣΥΣΤΗΜΑΤΑ</td><td>3.9</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0237</td><td>ΓΕΩΜΕΤΡΙΚΗ ΚΑΙ ΑΝΑΛΥΤΙΚΗ ΘΕΩΡΙΑ ΑΡΙΘΜΩΝ ΚΑΙ ΕΦΑΡΜΟΓΕΣ</td><td>5.4</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0261</td><td>ΜΙΓΑΔΙΚΗ ΑΝΑΛΥΣΗ ΚΑΙ ΘΕΩΡΙΑ ΔΥΝΑΜΙΚΟΥ</td><td>–</td><td class="type">Ε</td></tr>
             <tr><td class="code">0267</td><td>ΘΕΩΡΙΑ ΤΕΛΕΣΤΩΝ</td><td>1</td><td class="type">Ε</td></tr>
-            <tr class="green"><td class="code">0304Α</td><td>ΔΙΑΦΟΡΙΣΙΜΕΣ ΠΟΛΛΑΠΛΟΤΗΤΕΣ</td><td>5.5</td><td class="type">ΥΕ</td></tr>
-            <tr class="red"><td class="code">0308</td><td>ΓΕΩΜΕΤΡΙΑ ΙΙΙ ΚΑΙ ΟΜΑΔΕΣ</td><td>3.2</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0304Α</td><td>ΔΙΑΦΟΡΙΣΙΜΕΣ ΠΟΛΛΑΠΛΟΤΗΤΕΣ</td><td>5.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0308</td><td>ΓΕΩΜΕΤΡΙΑ ΙΙΙ ΚΑΙ ΟΜΑΔΕΣ</td><td>3.2</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0433</td><td>ΚΛΑΣΙΚΗ ΘΕΩΡΙΑ ΕΛΕΓΧΟΥ</td><td>2.5</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0434</td><td>ΚΡΥΠΤΟΓΡΑΦΙΑ</td><td>3.5</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0465</td><td>ΚΩΔΙΚΕΣ ΔΙΟΡΘΩΤΕΣ ΛΑΘΩΝ</td><td>1.5</td><td class="type">ΥΕ</td></tr>
@@ -319,17 +364,17 @@
           </thead>
           <tbody>
             <tr><td class="code">0132</td><td>ΘΕΩΡΙΑ ΣΥΝΟΛΩΝ Ι</td><td>–</td><td class="type">ΥΕ</td></tr>
-            <tr class="green"><td class="code">0134</td><td>ΘΕΩΡΙΑ GALOIS</td><td>5.5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0134</td><td>ΘΕΩΡΙΑ GALOIS</td><td>5.5</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0135</td><td>ΑΛΓΕΒΡΙΚΕΣ ΚΑΜΠΥΛΕΣ</td><td>3.7</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0136</td><td>ΘΕΩΡΙΑ ΑΡΙΘΜΩΝ</td><td>6.1</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0148</td><td>ΣΕΜΙΝΑΡΙΟ ΠΡΟΒΛΗΜΑΤΩΝ ΙΙ</td><td>2</td><td class="type">Ε</td></tr>
             <tr><td class="code">0165</td><td>ΑΛΓΕΒΡΙΚΗ ΘΕΩΡΙΑ ΑΡΙΘΜΩΝ</td><td>2.5</td><td class="type">ΥΕ</td></tr>
-            <tr class="red"><td class="code">0231</td><td>ΘΕΩΡΙΑ ΜΕΤΡΟΥ</td><td>4.1</td><td class="type">ΥΕ</td></tr>
-            <tr class="green"><td class="code">0232</td><td>ΣΤΟΙΧΕΙΑ ΣΥΝΑΡΤΗΣΙΑΚΗΣ ΑΝΑΛΥΣΗΣ</td><td>6.8</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0231</td><td>ΘΕΩΡΙΑ ΜΕΤΡΟΥ</td><td>4.1</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0232</td><td>ΣΤΟΙΧΕΙΑ ΣΥΝΑΡΤΗΣΙΑΚΗΣ ΑΝΑΛΥΣΗΣ</td><td>6.8</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0234</td><td>ΑΝΑΛΥΣΗ FOURIER</td><td>–</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0307</td><td>ΕΙΣΑΓΩΓΗ ΣΤΗ ΓΕΩΜΕΤΡΙΑ ΙΙ</td><td>4.8</td><td class="type">ΥΕ</td></tr>
-            <tr><td class="code">0332</td><td>ΚΛΑΣΙΚΗ ΔΙΑΦΟΡΙΚΗ ΓΕΩΜΕΤΡΙΑ ΙΙ</td><td>5</td><td class="type">ΥΕ</td></tr>
-            <tr class="red"><td class="code">0333Α</td><td>ΕΙΣΑΓΩΓΗ ΣΤΗ ΓΕΩΜΕΤΡΙΑ RIEMANN</td><td>1.8</td><td class="type">ΥΕ</td></tr>
+            <tr class="red"><td class="code">0332</td><td>ΚΛΑΣΙΚΗ ΔΙΑΦΟΡΙΚΗ ΓΕΩΜΕΤΡΙΑ ΙΙ</td><td>5</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0333Α</td><td>ΕΙΣΑΓΩΓΗ ΣΤΗ ΓΕΩΜΕΤΡΙΑ RIEMANN</td><td>1.8</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0361</td><td>ΔΙΑΦΟΡΙΚΕΣ ΜΟΡΦΕΣ</td><td>–</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0431</td><td>ΥΠΟΛΟΓΙΣΤΙΚΑ ΜΑΘΗΜΑΤΙΚΑ</td><td>–</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0432</td><td>ΘΕΩΡΗΤΙΚΗ ΠΛΗΡΟΦΟΡΙΚΗ ΙΙ</td><td>8.5</td><td class="type">ΥΕ</td></tr>
@@ -339,8 +384,8 @@
             <tr><td class="code">0532</td><td>ΘΕΩΡΙΑ ΠΙΝΑΚΩΝ</td><td>–</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0533</td><td>ΠΡΟΣΔΙΟΡΙΣΤΙΚΕΣ ΜΕΘΟΔΟΙ ΒΕΛΤΙΣΤΟΠΟΙΗΣΗΣ</td><td>–</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0564</td><td>ΧΡΟΝΙΚΕΣ ΣΕΙΡΕΣ</td><td>–</td><td class="type">Ε</td></tr>
-            <tr class="red"><td class="code">0566</td><td>ΔΕΙΓΜΑΤΟΛΗΨΙΑ</td><td>4</td><td class="type">Ε</td></tr>
-            <tr class="green"><td class="code">0569Α</td><td>ΑΛΓΟΡΙΘΜΟΙ ΚΑΙ ΠΟΛΥΠΛΟΚΟΤΗΤΕΣ</td><td>7.2</td><td class="type">ΥΕ</td></tr>
+            <tr><td class="code">0566</td><td>ΔΕΙΓΜΑΤΟΛΗΨΙΑ</td><td>4</td><td class="type">Ε</td></tr>
+            <tr><td class="code">0569Α</td><td>ΑΛΓΟΡΙΘΜΟΙ ΚΑΙ ΠΟΛΥΠΛΟΚΟΤΗΤΕΣ</td><td>7.2</td><td class="type">ΥΕ</td></tr>
             <tr><td class="code">0572</td><td>ΣΥΝΔΥΑΣΤΙΚΗ ΚΑΙ ΘΕΩΡΙΑ ΓΡΑΦΗΜΑΤΩΝ</td><td>–</td><td class="type">Ε</td></tr>
             <tr><td class="code">601</td><td>ΑΝΑΛΥΣΗ ΜΑΘΗΜΑΤΙΚΩΝ ΚΕΙΜΕΝΩΝ ΣΕ ΑΓΓΛΙΚΗ ΓΛΩΣΣΑ</td><td>–</td><td class="type">Ε</td></tr>
             <tr><td class="code">0962</td><td>ΙΣΤΟΡΙΑ ΤΩΝ ΜΑΘΗΜΑΤΙΚΩΝ</td><td>–</td><td class="type">Ε</td></tr>
